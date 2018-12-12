@@ -5,7 +5,7 @@
 #include"finance.h"
 #include"node.h"
 using namespace std;
-using namespace search_index
+using namespace search_index;
 class book
 {
 private:
