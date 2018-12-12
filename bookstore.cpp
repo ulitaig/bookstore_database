@@ -16,7 +16,6 @@ void DO(T &ifs);
 int main()
 {
 
-
 	init();
 
 	/*node o("1" ,3);
@@ -40,8 +39,6 @@ int main()
 	ifstream ifs("command.txt");
 	if (!ifs)
 	{
-		save0();
-		return 0;
 		user_id = "unregister";
 		permission = 0;
 		DO(cin);
