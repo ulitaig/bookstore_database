@@ -51,8 +51,8 @@ namespace search_index
 		bc[d][k]++;
 		if (bc[d][k] > bs)
 		{
-			if (d == 0)
-				puts("oooooooops");
+	/*		if (d == 0)
+				puts("oooooooops");*/
 			node *p = new node[bc[d][k] + 5];
 			fs[d][k].seekg(0);
 			for (int i = 0; i < bc[d][k]; i++)
