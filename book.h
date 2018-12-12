@@ -1,11 +1,11 @@
-#pragma once
+﻿#pragma once
 #include"stdc++.h"
 #include"error.h"
 #include"search.h"
 #include"finance.h"
 #include"node.h"
 using namespace std;
-using namespace search_index;
+using namespace index;
 class book
 {
 private:
@@ -191,6 +191,6 @@ public:
 	const double get_price() { return price; }
 	void out() const
 	{
-		cout << fixed << setprecision(2) << ISBN << "\t" << name << "\t" << author << "\t" << keyword << "\t" << price << "\t" << quantity << "±¾" << endl;
+		cout << fixed << setprecision(2) << ISBN << "\t" << name << "\t" << author << "\t" << keyword << "\t" << price << "\t" << quantity << "本" << endl;
 	}
 };
