@@ -5,7 +5,7 @@
 #include"finance.h"
 #include"node.h"
 using namespace std;
-using namespace index;
+using namespace search_index;
 class book
 {
 private:
@@ -191,6 +191,6 @@ public:
 	const double get_price() { return price; }
 	void out() const
 	{
-		cout << fixed << setprecision(2) << ISBN << "\t" << name << "\t" << author << "\t" << keyword << "\t" << price << "\t" << quantity << "±¾" << endl;
+		cout << fixed << setprecision(2) << ISBN << "\t" << name << "\t" << author << "\t" << keyword << "\t" << price << "\t" << quantity << "Â±Â¾" << endl;
 	}
 };
