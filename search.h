@@ -9,7 +9,7 @@ namespace search_index
 {
 	const string idx[] = { "user","ISBN","name","author","keyword" };
 	int bn[10];
-	const int bs = 5000;
+	const int bs = 100;
 	fstream bkf, usf;
 	int bkn, usn;
 	vector<fstream> fs[10];
@@ -51,7 +51,7 @@ namespace search_index
 		bc[d][k]++;
 		if (bc[d][k] > bs)
 		{
-	/*		if (d == 0)
+			/*if (d == 3&&bn[d]==30)
 				puts("oooooooops");*/
 			node *p = new node[bc[d][k] + 5];
 			fs[d][k].seekg(0);
@@ -126,7 +126,7 @@ namespace search_index
 		node a;
 		for (int i = 0; i < bc[d][k]; i++)
 		{
-			fs[0][1].seekg(i * sizeof(node));
+			fs[d][k].seekg(i * sizeof(node));
 			a.read(fs[d][k]);
 			if (o == a)
 			{
