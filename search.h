@@ -9,7 +9,7 @@ namespace search_index
 {
 	const string idx[] = { "user","ISBN","name","author","keyword" };
 	int bn[10];
-	const int bs = 50000;
+	const int bs = 5000;
 	fstream bkf, usf;
 	int bkn, usn;
 	vector<fstream> fs[10];
