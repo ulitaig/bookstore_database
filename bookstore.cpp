@@ -394,7 +394,11 @@ void DO(T &ifs)
 			}
 
 		}
-		else if (s[0].empty()) continue;
+		else if (s[0].empty())
+		{
+			save0();
+			return;
+		}
 		else { puts("Invalid"); continue; }
 	}
 	save0();
