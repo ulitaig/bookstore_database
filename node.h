@@ -50,21 +50,8 @@ public:
 	{
 		for (int i = 0; i < N; i++)
 			if (s[i] < b.s[i]) return true;
+			else if (s[i] > b.s[i]) return false;
 		return false;
-	}
-	bool operator >(const node &b) const
-	{
-		for (int i = 0; i < N; i++)
-			if (s[i] > b.s[i]) return true;
-		return false;
-	}
-	bool operator <=(const node &b) const
-	{
-		return !(*this > b);
-	}
-	bool operator >=(const node &b) const
-	{
-		return !(*this < b);
 	}
 	bool operator ==(const node &b) const
 	{
