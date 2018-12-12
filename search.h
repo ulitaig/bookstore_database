@@ -9,17 +9,29 @@ namespace search_index
 {
 	const string idx[] = { "user","ISBN","name","author","keyword" };
 	int bn[10];
-	const int bs = 1000;
+	const int bs = 5000;
 	fstream bkf, usf;
 	int bkn, usn;
 	vector<fstream> fs[10];
 	vector<int> nxt[10], bc[10];
 	vector<node> start[10];
-	inline string id(const int &i)
+	inline string id(int i)
 	{
+		char ch[10];
+		memset(ch, 0, sizeof(ch));
+		int l = 0, z=10;
+		while (i >= z) z *= 10;
+		z /= 10;
+		while(z>=1)
+		{
+			ch[l] ='0'+ i / z;
+			i %= 10;
+			z /= 10;
+			l++;
+		}
 		string ss;
-		ss.resize(1);
-		ss[0]= '0' + i;
+		ss.resize(l);
+		ss = ch;
 		return ss;
 	}
 	void insert(node o, int d)
@@ -39,8 +51,8 @@ namespace search_index
 		bc[d][k]++;
 		if (bc[d][k] > bs)
 		{
-			/*if (d == 3)
-				puts("oooooooops");*/
+			if (d == 0)
+				puts("oooooooops");
 			node *p = new node[bc[d][k] + 5];
 			fs[d][k].seekg(0);
 			for (int i = 0; i < bc[d][k]; i++)
