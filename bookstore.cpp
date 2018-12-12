@@ -5,7 +5,7 @@
 #include"search.h"
 #include"finance.h"
 using namespace std;
-using namespace index;
+using namespace search_index;
 char line[800];
 int permission;
 string user_id;
