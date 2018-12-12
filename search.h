@@ -5,7 +5,7 @@
 #include"node.h"
 #include"finance.h"
 using namespace std;
-namespace index
+namespace search_index
 {
 	const string idx[] = { "user","ISBN","name","author","keyword" };
 	int bn[10];
@@ -114,7 +114,7 @@ namespace index
 		node a;
 		for (int i = 0; i < bc[d][k]; i++)
 		{
-			fs[0][1].seekg(i * sizeof(node), 0);
+			fs[0][1].seekg(i * sizeof(node));
 			a.read(fs[d][k]);
 			if (o == a)
 			{
