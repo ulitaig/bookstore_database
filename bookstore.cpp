@@ -15,16 +15,7 @@ template <class T>
 void DO(T &ifs);
 int main()
 {
-	/*cin.getline(line, 800,'#');
-	char asd[10];
-	memset(asd, 0, sizeof(asd));
-	cout << asd<<endl;
-	string qwe(line);
-	qwe=qwe.substr(3, 2);
-	cout << qwe <<"@"<<qwe.length()<< endl;
-	while(1) getchar();
-	return 0;*/
-	//cout << sizeof(node);
+
 
 	init();
 
@@ -49,6 +40,8 @@ int main()
 	ifstream ifs("command.txt");
 	if (!ifs)
 	{
+		save0();
+		return 0;
 		user_id = "unregister";
 		permission = 0;
 		DO(cin);
@@ -404,4 +397,5 @@ void DO(T &ifs)
 		else if (s[0].empty()) continue;
 		else { puts("Invalid"); continue; }
 	}
+	save0();
 }
